@@ -14,7 +14,7 @@ after_success:
   - docker build -t meataur/multi-server ./server
   - docker build -t meataur/multi-worker ./worker
   # Log in to the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login --u meataur --password-stdin
   # Take those images and push them to docker hub
   - docker push meataur/multi-client
   - docker push meataur/multi-nginx
