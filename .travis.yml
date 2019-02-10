@@ -26,6 +26,7 @@ after_success:
   - docker push meataur/multi-server
   - docker push meataur/multi-worker
 
+
 deploy:
   provider: elasticbeanstalk
   region: us-east-2
